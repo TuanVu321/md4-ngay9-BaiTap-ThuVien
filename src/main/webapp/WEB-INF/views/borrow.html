@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Muon sach</title>
+</head>
+<body>
+<h1>trang muon sach</h1>
+
+<form th:action="@{/borrow}" th:object="${userBook}" method="post">
+    <input type="hidden" th:field="*{id}" th:name="id">
+    <table>
+        <tr>
+            <td>Ten sach</td>
+            <td th:text="*{getBookName()}" th:name="bookName"></td>
+        </tr>
+        <tr>
+            <td>So luong con lai</td>
+            <td th:text="*{getNumber()}" th:name="number"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Muon"></td>
+        </tr>
+    </table>
+
+</form>
+
+
+
+</body>
+</html>

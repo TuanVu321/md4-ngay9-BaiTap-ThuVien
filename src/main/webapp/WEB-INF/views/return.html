@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tra sach</title>
+</head>
+<body>
+<h1>Tra sach</h1>
+<a href="/">Quay lai trang chu</a>
+<form th:action="@{/return}" method="post" th:object="${UserBook}">
+    <input th:field="*{code}" th:name="code">
+    <input type="submit" value="Tra sach">
+</form>
+</body>
+</html>

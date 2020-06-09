@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show List</title>
+</head>
+<body>
+<h1>Danh sach sach muon duoc</h1>
+<a href="/return">tra sach</a>
+<table>
+    <tr>
+        <td>Id sach</td>
+        <td>Ten sach</td>
+        <td>So luong</td>
+        <td>Muon</td>
+    </tr>
+    <tr th:each="lists:${list}">
+        <td th:text="${lists.getId()}"></td>
+        <td th:text="${lists.getBookName()}"></td>
+        <td th:text="${lists.getNumber()}"></td>
+        <td><a th:href="@{/borrow/__${lists.getId()}__}">Muon</a></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
